@@ -134,7 +134,7 @@ const Hero = () => {
                             <Separator />
 
                             <p>
-                                Proffinder is a platform which lets students input a 3 queries, the professor/faculty name, the day and the time slots which will then display their location (text-format) and their current status Proffinder is especially useful for large institutions where navigation can often be touch, or for freshers who are not aware of faulty locations. Proffinder implements authentication for faculty which lets faculty login, upload a timetable and set a current status which will be displayed for selected slots.
+                                Proffinder is a platform which lets students input a 3 queries, the professor/faculty name, the day and the time slots which will then display their location (text-format) and their current status. Proffinder is especially useful for large institutions where navigation can often be tough, or for freshers who are not aware of faculty locations. Proffinder implements authentication for faculty which lets faculty login, upload a timetable and set a current status which will be displayed for selected slots.
                             </p>
                         </CardContent>
                         <Separator />
