@@ -53,7 +53,7 @@ const Hero = () => {
 
             {/* ABOUT ME */}
             <div className='mx-4 text-center' id='about-me'>
-                <h1 className='mt-20 text-3xl lg:text-5xl'>Heyy There! I'm Tejas!</h1>
+                <h1 className='mt-20 text-3xl lg:text-5xl'>Heyy There! I&apos;m Tejas!</h1>
 
                 <div className='flex flex-col sm:flex-row'>
                     <Card className='m-4 sm:m-8 md:my-12 md:w-1/2 flex flex-col'>
@@ -155,7 +155,7 @@ const Hero = () => {
                             <Separator />
 
                             <p>
-                                Promptopia is an online social platform which let's users share custom AI prompts. Users can login through Google OAuth and create AI prompts which will be displayed in a beautiful grid on the home page and can be copied by a single click. This Project was my first Next.js and Tailwind CSS Project which turned out to be pretty good!
+                                Promptopia is an online social platform which let&apos;s users share custom AI prompts. Users can login through Google OAuth and create AI prompts which will be displayed in a beautiful grid on the home page and can be copied by a single click. This Project was my first Next.js and Tailwind CSS Project which turned out to be pretty good!
                             </p>
                         </CardContent>
                         <Separator />
@@ -173,7 +173,7 @@ const Hero = () => {
                     <h1 className='text-3xl sm:text-4xl'>
                         Interested in working together?
                         <br />
-                        Let's connect <span className='text-green-500'>&&</span> build together!
+                        Let&apos;s connect <span className='text-green-500'>&&</span> build together!
                     </h1>
                 </div>
 
