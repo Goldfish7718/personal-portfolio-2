@@ -1,9 +1,9 @@
+"use client"
+
 import {
     Sheet,
+    SheetClose,
     SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import {
@@ -11,20 +11,26 @@ import {
     MenubarContent,
     MenubarItem,
     MenubarMenu,
-    MenubarSeparator,
-    MenubarShortcut,
     MenubarTrigger,
   } from "@/components/ui/menubar"
   
-import { Menu, ArrowUpRightFromSquare, Twitter, Instagram, Github, Linkedin, Sun } from "lucide-react"
+import { Menu, ArrowUpRightFromSquare, Twitter, Instagram, Github, Linkedin } from "lucide-react"
 import { Button } from "./ui/button"
 import { ModeToggle } from "./mode-toggle"
 import { Separator } from "./ui/separator"
 
 const Navbar = () => {
+
+    const scrollToElement = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        }; // Empty dependency array ensures the effect runs only once after the component mounts
+      };
+
   return (
     <>
-        <nav className="p-3 px-12 sm:text-left flex justify-between items-center">
+        <nav className="p-4 py-6 sm:p-3 sm:mt-0 sm:text-left flex justify-between items-center z-10 fixed w-full bg-white dark:bg-[#0a0a0a] bg-opacity-90 backdrop-blur-sm">
             <h1 className="text-xl sm:text-2xl">Tejas Nanoti</h1>
 
             <div className="sm:hidden">
@@ -34,9 +40,11 @@ const Navbar = () => {
                     </SheetTrigger>
                     <SheetContent>
                         <div className="mt-5">
-                            <Button variant='outline' className="m-2 w-full">Home</Button>
-                            <Button variant='outline' className="m-2 w-full">Projects</Button>
-                            <Button variant='outline' className="m-2 w-full">Get in touch!</Button>
+                            <SheetClose>
+                                <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('about-me')}>About me</Button>
+                                <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('projects')}>Projects</Button>
+                                <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('socials')}>Get in touch!</Button>
+                            </SheetClose>
                             <ModeToggle className="w-full" />
                         </div>
                     </SheetContent>
@@ -48,46 +56,24 @@ const Navbar = () => {
                 <Menubar>
                     {/* HOME */}
                     <MenubarMenu>
-                        <MenubarTrigger className="hover:cursor-pointer">Home</MenubarTrigger>
+                        <MenubarTrigger onClick={() => scrollToElement('home')} className="hover:cursor-pointer" >Home</MenubarTrigger>
+                    </MenubarMenu>
+                    {/* ABOUT ME */}
+                    <MenubarMenu>
+                        <MenubarTrigger onClick={() => scrollToElement('about-me')} className="hover:cursor-pointer" >About me</MenubarTrigger>
                     </MenubarMenu>
                     {/* PROJECTS */}
                     <MenubarMenu>
-                        <MenubarTrigger className="hover:cursor-pointer">Projects</MenubarTrigger>
-                        <MenubarContent>
-                            <MenubarItem className="hover:cursor-pointer">
-                                Shelf-mates <ArrowUpRightFromSquare className="mx-2" size={18} />
-                            </MenubarItem>
-                            <MenubarItem className="hover:cursor-pointer">
-                                Proffinder <ArrowUpRightFromSquare className="mx-2" size={18} />
-                            </MenubarItem>
-                            {/* <MenubarSeparator /> */}
-                            <MenubarItem className="hover:cursor-pointer">
-                                Promptopia <ArrowUpRightFromSquare className="mx-2" size={18} />
-                            </MenubarItem>
-                        </MenubarContent>
+                        <MenubarTrigger className="hover:cursor-pointer" onClick={() => scrollToElement('projects')}>Projects</MenubarTrigger>
                     </MenubarMenu>
-
                     {/* CONTACT */}
                     <MenubarMenu>
-                        <MenubarTrigger className="hover:cursor-pointer">Socials</MenubarTrigger>
-                        <MenubarContent>
-                            <MenubarItem className="hover:cursor-pointer">
-                                X (Twitter) <Twitter className="mx-2" size={18} />
-                            </MenubarItem>
-                            <MenubarItem className="hover:cursor-pointer">
-                                Instagram <Instagram className="mx-2" size={18} />
-                            </MenubarItem>
-                            <MenubarItem className="hover:cursor-pointer">
-                                LinkedIn <Linkedin className="mx-2" size={18} />
-                            </MenubarItem>
-                            <MenubarItem className="hover:cursor-pointer">
-                                Github <Github className="mx-2" size={18} />
-                            </MenubarItem>
-                        </MenubarContent>
+                        <MenubarTrigger className="hover:cursor-pointer" onClick={() => scrollToElement('socials')}>Socials</MenubarTrigger>
                     </MenubarMenu>
                 </Menubar>
             </div>
         </nav>
+        <Separator />
     </>
   )
 }
