@@ -18,6 +18,7 @@ import { TbBrandNextjs } from 'react-icons/tb'
 import { SiExpress, SiMongodb } from 'react-icons/si'
 import Image from 'next/image'
 import { Badge } from './ui/badge'
+import { scrollToElement } from './Navbar'
 
 const Hero = () => {
 
@@ -39,7 +40,7 @@ const Hero = () => {
             </div>
 
             <div className='mt-6 mx-8 flex flex-row mb-20'>
-                <Button className='mx-3 w-50'>View Projects <ArrowUpRightFromSquare size={18} className='mx-1' /></Button>
+                <Button className='mx-3 w-50' onClick={() => scrollToElement('projects')}>View Projects</Button>
                 <Button className='mx-3 w-50' variant='secondary' onClick={() => router.push('https://github.com/goldfish7718')}>Github <Github size={18} className='mx-1' /></Button>
             </div>
 
@@ -161,8 +162,8 @@ const Hero = () => {
             </div>
 
             {/* SOCIALS */}
-            <div className='mt-10 sm:mt-20 text-center' id='socials'>
-                <div className='mx-4 sm:mx-16'>
+            <div className='text-center pt-20' id='socials'>
+                <div className='mx-2 sm:mx-16'>
                     <h1 className='text-3xl sm:text-4xl'>
                         Interested in working together?
                         <br />
@@ -177,7 +178,17 @@ const Hero = () => {
                     <Button className='p-8 m-2 sm:m-4 sm:p-16' variant='secondary' onClick={() => router.push('https://bento.me/tejasnanoti')}><User className='mx-2' /> Bento</Button>
                     <Button className='p-8 m-2 sm:m-4 sm:p-16' variant='secondary' onClick={() => router.push('https://www.linkedin.com/in/tejas-nanoti-23965823b/')}><Linkedin className='mx-2' /> LinkedIn</Button>
                     <Button className='p-8 m-2 sm:m-4 sm:p-16' variant='secondary' onClick={() => router.push('mailto:tejasnanoti2@gmail.com')}><Mail className='mx-2' /> Email</Button>
-                </div>
+                </div>                
+            </div>
+
+            <div className='flex justify-center items-center mt-5 mb-10'>
+                <Button className='flex flex-row'>Codebase on Github <ArrowUpRightFromSquare size={18} className='mx-1' /></Button>
+            </div>
+
+            {/* FOOTER */}
+            <Separator />
+            <div className='p-4'>
+                <p>Made With &lt;3 by Tejas</p>
             </div>
         </div>
     </>

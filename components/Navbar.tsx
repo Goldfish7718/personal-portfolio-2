@@ -19,14 +19,14 @@ import { Button } from "./ui/button"
 import { ModeToggle } from "./mode-toggle"
 import { Separator } from "./ui/separator"
 
-const Navbar = () => {
+export const scrollToElement = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+    }; 
+  };
 
-    const scrollToElement = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        }; // Empty dependency array ensures the effect runs only once after the component mounts
-      };
+const Navbar = () => {
 
   return (
     <>
@@ -41,6 +41,7 @@ const Navbar = () => {
                     <SheetContent>
                         <div className="mt-5">
                             <SheetClose>
+                                <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('home')}>Home</Button>
                                 <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('about-me')}>About me</Button>
                                 <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('projects')}>Projects</Button>
                                 <Button variant='outline' className="m-2 w-full" onClick={() => scrollToElement('socials')}>Get in touch!</Button>
