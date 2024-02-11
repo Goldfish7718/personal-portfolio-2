@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tejas Nanoti's Personal Portfolio Website 🚀
 
-## Getting Started
+![Landing Page](/snapshots/Landing.png)
 
-First, run the development server:
+This repository contains the codebase for my **latest** personal portfolio website. I'm creating this small README to list the technologies I have used.
+
+## Technologies Used
+
+- Next.js
+- Tailwind CSS
+- Shadcn-UI
+
+## How to run Project
+
+1. Clone this project using the following command
+
+```bash
+git clone https://github.com/goldfish7718/personal-portfolio-2.git
+```
+
+2. Install Dependencies
+
+```bash
+npm install
+```
+
+3. Start Development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+And now you can view the website on `https://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Contact 🔗
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- For any questions, please contact me on my email: [tejasnanoti2@gmail.com](mailto:tejasnanoti2@gmail.com)
+- [![Twitter: tejas_jsx](https://img.shields.io/twitter/follow/tejas_jsx?style=social)](https://twitter.com/tejas_jsx)
+- [![Linkedin: tejasnanoti](https://img.shields.io/badge/-tejasnanoti-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tejas-nanoti-23965823b/)](https://www.linkedin.com/in/tejas-nanoti-23965823b/)
+- [![GitHub Goldfish7718](https://img.shields.io/github/followers/Goldfish7718?label=follow&style=social)](https://github.com/Goldfish7718)
 
-## Learn More
+# Licenses 📃
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- This project is licensed under the [MIT License](LICENSE)
