@@ -9,6 +9,12 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"  
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
 import { Button } from './ui/button'
 import { ArrowUpRightFromSquare, Github, Instagram, Linkedin, Mail, Settings, Twitter, User } from 'lucide-react'
 import { useRouter } from 'next/navigation'
@@ -86,7 +92,7 @@ const Hero = () => {
             </div>
 
             {/* PROJECTS */}
-            <div id='projects' className='text-center mb-10 sm:mb-20'>
+            <div id='projects' className='text-center'>
                 <h1 className='mt-20 text-3xl lg:text-5xl'>Noteable Projects</h1>
 
                 <div className="flex flex-col md:flex-row m-2 mt-10 text-left">
@@ -162,7 +168,7 @@ const Hero = () => {
             </div>
 
             {/* SOCIALS */}
-            <div className='text-center pt-20' id='socials'>
+            <div className='text-center pt-24' id='socials'>
                 <div className='mx-2 sm:mx-16'>
                     <h1 className='text-3xl sm:text-4xl'>
                         Interested in working together?
@@ -182,7 +188,7 @@ const Hero = () => {
             </div>
 
             <div className='flex justify-center items-center mt-5 mb-10'>
-                <Button className='flex flex-row'>Codebase on Github <ArrowUpRightFromSquare size={18} className='mx-1' /></Button>
+                <Button className='flex flex-row' onClick={() => router.push('https://github.com/goldfish7718/personal-portfolio-2')}>Codebase on Github <ArrowUpRightFromSquare size={18} className='mx-1' /></Button>
             </div>
 
             {/* FOOTER */}
