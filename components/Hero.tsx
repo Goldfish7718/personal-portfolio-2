@@ -25,6 +25,7 @@ import { SiExpress, SiMongodb } from 'react-icons/si'
 import Image from 'next/image'
 import { Badge } from './ui/badge'
 import { scrollToElement } from './Navbar'
+import Link from 'next/link'
 
 const Hero = () => {
 
@@ -55,8 +56,8 @@ const Hero = () => {
             <div className='mx-4 text-center' id='about-me'>
                 <h1 className='mt-20 text-3xl lg:text-5xl'>Heyy There! I&apos;m Tejas!</h1>
 
-                <div className='flex flex-col sm:flex-row'>
-                    <Card className='m-4 sm:m-8 md:my-12 md:w-1/2 flex flex-col'>
+                <div className='flex flex-col sm:flex-row md:mt-0 mt-6 '>
+                    <Card className='m-1 my-4 sm:m-4 md:m-6 md:my-12 sm:w-1/2 flex flex-col'>
                         <CardHeader>
                             <CardTitle className='flex flex-row justify-center sm:justify-between'>About me <User size={24} className='mx-1' /></CardTitle>
                         </CardHeader>
@@ -71,7 +72,7 @@ const Hero = () => {
                             <Button className='mt-4' variant='outline' onClick={() => router.push('https://github.com/goldfish7718')}>View Github Profile <Github size={18} className='mx-1' /></Button>
                         </CardFooter>
                     </Card>
-                    <Card className='m-4 sm:m-8 md:my-12 md:w-1/2'>
+                    <Card className='m-1 my-4 sm:m-4 md:m-6 md:my-12 sm:w-1/2'>
                         <CardHeader>
                             <CardTitle className='flex flex-row justify-center sm:justify-between'>Top Technologies <Settings size={24} className='mx-1' /></CardTitle>
                         </CardHeader>
@@ -189,6 +190,11 @@ const Hero = () => {
 
             <div className='flex justify-center items-center mt-5 mb-10'>
                 <Button className='flex flex-row' onClick={() => router.push('https://github.com/goldfish7718/personal-portfolio-2')}>Codebase on Github <ArrowUpRightFromSquare size={18} className='mx-1' /></Button>
+                <Button className='m-4' variant='link' asChild>
+                    <Link href='https://tejasnanoti-old-portfolio.vercel.app'>
+                        View Old Portfolio <ArrowUpRightFromSquare size={18} className='mx-1' />
+                    </Link>
+                </Button>
             </div>
 
             {/* FOOTER */}

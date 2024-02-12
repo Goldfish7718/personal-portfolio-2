@@ -32,6 +32,10 @@ npm run dev
 
 And now you can view the website on `https://localhost:3000`
 
+# Deployment 🌐
+
+- This website is currently available on this domain: [Tejas Nanoti's Personal Portfolio](https://tejasnanoti.vercel.app)
+
 # Contact 🔗
 
 - For any questions, please contact me on my email: [tejasnanoti2@gmail.com](mailto:tejasnanoti2@gmail.com)

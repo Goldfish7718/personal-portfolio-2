@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <>
         <nav className="p-4 py-6 sm:p-3 sm:mt-0 sm:text-left flex justify-between items-center z-10 fixed w-full dark:bg-[#0a0a0a] dark:bg-opacity-70 backdrop-blur-sm">
-            <h1 className="text-xl sm:text-2xl">Tejas Nanoti</h1>
+            <h1 className="text-xl sm:text-2xl hover:cursor-pointer" onClick={() => scrollToElement('home')}>Tejas Nanoti</h1>
 
             {/* MOBILE NAVIGATION */}
             <div className="sm:hidden">
