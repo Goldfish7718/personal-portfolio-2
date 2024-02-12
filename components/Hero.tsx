@@ -34,7 +34,7 @@ const Hero = () => {
     <>
         {/* HERO */}
         <div className='h-screen flex flex-col items-center flex-grow' id='home'>
-            <div className='mx-4 text-center'>
+            <div className='mx-4 my-8 sm:my-0 text-center'>
                 <h1 className='mt-52 text-3xl lg:text-5xl dark:text-gray-400 text-gray-800'>Crafting Digital Experiences</h1>
                 <h1 className='text-3xl lg:text-5xl mt-0.5 sm:mt-1'>for Brands & Startups</h1>
             </div>
@@ -168,7 +168,7 @@ const Hero = () => {
             </div>
 
             {/* SOCIALS */}
-            <div className='text-center pt-24' id='socials'>
+            <div className='text-center pt-24 my-8 sm:my-0' id='socials'>
                 <div className='mx-2 sm:mx-16'>
                     <h1 className='text-3xl sm:text-4xl'>
                         Interested in working together?

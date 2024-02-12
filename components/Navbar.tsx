@@ -30,9 +30,10 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className="p-4 py-6 sm:p-3 sm:mt-0 sm:text-left flex justify-between items-center z-10 fixed w-full bg-white dark:bg-[#0a0a0a] bg-opacity-90 backdrop-blur-sm">
+        <nav className="p-4 py-6 sm:p-3 sm:mt-0 sm:text-left flex justify-between items-center z-10 fixed w-full dark:bg-[#0a0a0a] dark:bg-opacity-70 backdrop-blur-sm">
             <h1 className="text-xl sm:text-2xl">Tejas Nanoti</h1>
 
+            {/* MOBILE NAVIGATION */}
             <div className="sm:hidden">
                 <Sheet>
                     <SheetTrigger>
@@ -52,6 +53,7 @@ const Navbar = () => {
                 </Sheet>
             </div>
 
+            {/* DESKTOP NAVIGATION */}
             <div className="hidden sm:flex flex-row items-center">
                 <ModeToggle className='ml-auto' />
                 <Menubar>
