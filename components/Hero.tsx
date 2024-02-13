@@ -26,6 +26,7 @@ import Image from 'next/image'
 import { Badge } from './ui/badge'
 import { scrollToElement } from './Navbar'
 import Link from 'next/link'
+import { TextGenerateEffect } from './ui/text-generate-effect'
 
 const Hero = () => {
 
@@ -36,17 +37,17 @@ const Hero = () => {
         {/* HERO */}
         <div className='h-screen flex flex-col items-center flex-grow' id='home'>
             <div className='mx-4 my-8 sm:my-0 text-center'>
-                <h1 className='mt-52 text-3xl lg:text-5xl dark:text-gray-400 text-gray-800'>Crafting Digital Experiences</h1>
-                <h1 className='text-3xl lg:text-5xl mt-0.5 sm:mt-1'>for Brands & Startups</h1>
+                <h1 className='mt-52 text-3xl lg:text-5xl dark:text-gray-400 text-gray-800 animate-fade-in'>Crafting Digital Experiences</h1>
+                <h1 className='text-3xl lg:text-5xl mt-0.5 sm:mt-1 animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '.7s' }}>for Brands & Startups</h1>
             </div>
 
             <div className='pt-8 p-4 sm:mx-24'>
-                <p className='text-center text-sm sm:text-lg'>
+                <p className='text-center text-sm sm:text-lg animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '1.4s' }}>
                     Passionate Full Stack Web Developer based in India. Freelancer. Open-source contributor & to-be Machine Learning Enginner!
                 </p>
             </div>
 
-            <div className='mt-6 mx-8 flex flex-row mb-20'>
+            <div className='mt-6 mx-8 flex flex-row mb-20 animate-fade-vertical-in' style={{ animationFillMode: 'backwards', animationDelay: '2.1s' }}>
                 <Button className='mx-3 w-50' onClick={() => scrollToElement('projects')}>View Projects</Button>
                 <Button className='mx-3 w-50' variant='secondary' onClick={() => router.push('https://github.com/goldfish7718')}>Github <Github size={18} className='mx-1' /></Button>
             </div>
@@ -188,7 +189,7 @@ const Hero = () => {
                 </div>                
             </div>
 
-            <div className='flex justify-center items-center mt-5 mb-10'>
+            <div className='flex flex-col sm:flex-row justify-center items-center mt-5 mb-10'>
                 <Button className='flex flex-row' onClick={() => router.push('https://github.com/goldfish7718/personal-portfolio-2')}>Codebase on Github <ArrowUpRightFromSquare size={18} className='mx-1' /></Button>
                 <Button className='m-4' variant='link' asChild>
                     <Link href='https://tejasnanoti-old-portfolio.vercel.app'>
