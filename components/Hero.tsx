@@ -43,7 +43,7 @@ const Hero = () => {
 
             <div className='pt-8 p-4 sm:mx-24'>
                 <p className='text-center text-sm sm:text-lg animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '1.4s' }}>
-                    Passionate Full Stack Web Developer based in India. Freelancer. Open-source contributor & to-be Machine Learning Enginner!
+                    Passionate Full Stack Web Developer based in India. Freelancer. Open-source contributor & to-be Machine Learning Engineer!
                 </p>
             </div>
 
