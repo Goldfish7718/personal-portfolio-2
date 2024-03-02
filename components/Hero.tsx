@@ -132,7 +132,7 @@ const Hero = () => {
                         </CardHeader>
                         <Separator />
                         <CardContent className='p-2 flex-grow'>
-                            <Image alt='shelf-mates image' className='mx-auto' src='/proffinder.png' width={400} height={300} objectFit='cover'/>
+                            <Image alt='proffinder image' className='mx-auto' src='/proffinder.png' width={400} height={300} objectFit='cover'/>
                             <Separator />
 
                             <p>
@@ -145,25 +145,25 @@ const Hero = () => {
                         </CardFooter>
                     </Card>
 
-                    {/* PROJECT PROMPTOPIA */}
+                    {/* PROJECT BRANCH PROMPT */}
                     <Card className='m-2 md:w-1/3 flex flex-col'>
                         <CardHeader className='flex flex-row justify-between items-center sm:flex-col lg:flex-row'>
-                            <CardTitle>Promptopia</CardTitle>
-                            <Badge className='sm:text-xs' variant='secondary'>Next.js + Tailwind CSS</Badge>
+                            <CardTitle>Brach-prompt</CardTitle>
+                            <Badge className='sm:text-xs' variant='secondary'>Next.js + shadcn-ui</Badge>
                         </CardHeader>
                         <Separator />
                         <CardContent className='p-2 flex-grow'>
-                            <Image alt='shelf-mates image' className='mx-auto' src='/promptopia.png' width={400} height={300} objectFit='cover'/>
+                            <Image alt='branch-prompt image' className='mx-auto' src='/branch-prompt.png' width={400} height={300} objectFit='cover'/>
                             <Separator />
 
                             <p>
-                                Promptopia is an online social platform which let&apos;s users share custom AI prompts. Users can login through Google OAuth and create AI prompts which will be displayed in a beautiful grid on the home page and can be copied by a single click. This Project was my first Next.js and Tailwind CSS Project which turned out to be pretty good!
+                                Branch-prompt is an online social platform which let&apos;s students from my college post anonymous prompts anonymously! This is a single-page applicationI built with Next.js, Shadcn-UI & Tailwind CSS. It uses MongoDB for its primary database. The platform is completely anonymous since it does not collect name or hints about the user so Branch-prompt is 100% anonymous.
                             </p>
                         </CardContent>
                         <Separator />
                         <CardFooter className='flex flex-row p-3'>
-                            <Button className='flex-grow m-2' onClick={() => router.push('https://github.com/Goldfish7718/Promptopia')}><Github size={24} /></Button>
-                            <Button className='flex-grow m-2' variant='secondary' onClick={() => router.push('https://promptopia-9qqz.onrender.com')}><ArrowUpRightFromSquare size={24} /></Button>
+                            <Button className='flex-grow m-2' onClick={() => router.push('https://github.com/Goldfish7718/branch-prompt')}><Github size={24} /></Button>
+                            <Button className='flex-grow m-2' variant='secondary' onClick={() => router.push('https://branch-prompt.vercel.app')}><ArrowUpRightFromSquare size={24} /></Button>
                         </CardFooter>
                     </Card>
                 </div>
