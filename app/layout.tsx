@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   description: "Tejas Nanoti is a Full Stack Web developer based in India. Currently working on open-source projects and freelancing.",
   metadataBase: new URL('https://tejasnanoti.vercel.app'),
   openGraph: {
+    title: "Tejas Nanoti • Web dev • Blockchain • ML Enthusiast",
+    description: "20 year old MERN Stack & Ethereum Blockchain Developer. Based in India.",
+    url: "https://tejasnanoti.vercel.app",
+    images: {
+      url: "/opengraph-image.png",
+      width: 1728,
+      height: 1117,
+      alt: "Tejas Nanoti | Web Dev | UI/UX | Machine Learning",
+    },
     siteName: "Tejas Nanoti's Personal Portfolio Website"
   }
 };
