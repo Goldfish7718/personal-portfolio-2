@@ -36,20 +36,19 @@ const Hero = () => {
     <>
         {/* HERO */}
         <div className='h-screen flex flex-col items-center flex-grow' id='home'>
-            <div className='mx-4 my-8 sm:my-0 text-center'>
-                <h1 className='mt-52 text-3xl lg:text-5xl dark:text-gray-400 text-gray-800 animate-fade-in'>Crafting Digital Experiences</h1>
+            {/* LANDING PAGE */}
+            <div className='mx-4 my-8 sm:my-0 text-left'>
+                <h1 className='mt-52 text-3xl lg:text-5xl dark:text-neutral-400 text-gray-800 animate-fade-in'>Crafting Digital Experiences</h1>
                 <h1 className='text-3xl lg:text-5xl mt-0.5 sm:mt-1 animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '.7s' }}>for Brands & Startups</h1>
-            </div>
 
-            <div className='pt-8 p-4 sm:mx-24'>
-                <p className='text-center text-sm sm:text-lg animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '1.4s' }}>
+                <p className='text-left py-4 text-sm sm:text-lg animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '1.4s' }}>
                     Passionate Full Stack Web Developer based in India. Freelancer. Open-source contributor & to-be Machine Learning Engineer!
                 </p>
-            </div>
 
-            <div className='mt-6 mx-8 flex flex-row mb-20 animate-fade-vertical-in' style={{ animationFillMode: 'backwards', animationDelay: '2.1s' }}>
-                <Button className='mx-3 w-50' onClick={() => scrollToElement('projects')}>View Projects</Button>
-                <Button className='mx-3 w-50' variant='secondary' onClick={() => router.push('https://github.com/goldfish7718')}>Github <Github size={18} className='mx-1' /></Button>
+                <div className='mt-6 flex flex-row mb-20 animate-fade-vertical-in' style={{ animationFillMode: 'backwards', animationDelay: '2.1s' }}>
+                    <Button className='mr-3 w-50' onClick={() => scrollToElement('projects')}>View Projects</Button>
+                    <Button className='mr-3 w-50' variant='secondary' onClick={() => router.push('https://github.com/goldfish7718')}>Github <Github size={18} className='mx-1' /></Button>
+                </div>
             </div>
 
 
