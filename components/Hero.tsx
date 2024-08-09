@@ -26,7 +26,6 @@ import Image from 'next/image'
 import { Badge } from './ui/badge'
 import { scrollToElement } from './Navbar'
 import Link from 'next/link'
-import { TextGenerateEffect } from './ui/text-generate-effect'
 
 const Hero = () => {
 
@@ -42,7 +41,7 @@ const Hero = () => {
                 <h1 className='text-3xl lg:text-5xl mt-0.5 sm:mt-1 animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '.7s' }}>for Brands & Startups</h1>
 
                 <p className='text-left py-4 text-sm sm:text-lg animate-fade-in' style={{ animationFillMode: 'backwards', animationDelay: '1.4s' }}>
-                    Passionate Full Stack Web Developer based in India. Freelancer. Open-source contributor & to-be Machine Learning Engineer!
+                    Passionate Full Stack Web Developer based in India. Open-source contributor & Blockchain Developer!
                 </p>
 
                 <div className='mt-6 flex flex-row mb-20 animate-fade-vertical-in' style={{ animationFillMode: 'backwards', animationDelay: '2.1s' }}>
@@ -120,27 +119,27 @@ const Hero = () => {
                         </CardFooter>
                     </Card>
 
-                    {/* PROJECT PROFFINDER */}
+                    {/* PROJECT RECENTS */}
                     <Card className='m-2 md:w-1/3 flex flex-col'>
                         <CardHeader className='flex flex-row justify-between items-center sm:flex-col lg:flex-row'>
-                            <CardTitle>ProfFinder</CardTitle>
+                            <CardTitle>Recents</CardTitle>
                             <div className='flex sm:flex-row flex-col'>
-                                <Badge variant='secondary' className='mx-1 my-1 sm:my-0 sm:text-xs'>MERN Stack</Badge>
-                                <Badge variant='destructive' className='mx-1 my-1 sm:my-0 sm:text-xs'>Not deployed</Badge>
+                                <Badge variant='secondary' className='mx-1 my-1 sm:my-0 sm:text-xs'>Next.js + MERN Stack</Badge>
                             </div>
                         </CardHeader>
                         <Separator />
                         <CardContent className='p-2 flex-grow'>
-                            <Image alt='proffinder image' className='mx-auto' src='/proffinder.png' width={400} height={300} objectFit='cover'/>
+                            <Image alt='proffinder image' className='mx-auto' src='/recents.png' width={400} height={300} objectFit='cover'/>
                             <Separator />
 
                             <p>
-                                Proffinder is a platform which lets students input a 3 queries, the professor/faculty name, the day and the time slots which will then display their location (text-format) and their current status. Proffinder is especially useful for large institutions where navigation can often be tough, or for freshers who are not aware of faculty locations. Proffinder implements authentication for faculty which lets faculty login, upload a timetable and set a current status which will be displayed for selected slots.
+                                Recents is a platform to get AI-generated news summaries for people who don't like to read newspapers. It uses the News API and Gemini API to get AI generated news summaries. I developed this website as my project for Buildspace Nights & Weekends Season 6. Watch my demo <Link href='https://sage.buildspace.so/projects/recents-a-website-to-get-an-generated-news-summaries-NeHKLm0' className='underline decoration-2 hover:text-neutral-300'>here</Link>
                             </p>
                         </CardContent>
                         <Separator />
                         <CardFooter className='flex flex-row p-3'>
-                            <Button className='flex-grow m-2' onClick={() => router.push('https://github.com/Goldfish7718/proffinder')}><Github size={24} /></Button>
+                            <Button className='flex-grow m-2' onClick={() => router.push('https://github.com/Goldfish7718/recents')}><Github size={24} /></Button>
+                            <Button className='flex-grow m-2' variant='secondary' onClick={() => router.push('https://recents-news.vercel.app')}><ArrowUpRightFromSquare size={24} /></Button>
                         </CardFooter>
                     </Card>
 
