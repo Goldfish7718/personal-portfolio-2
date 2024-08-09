@@ -133,7 +133,7 @@ const Hero = () => {
                             <Separator />
 
                             <p>
-                                Recents is a platform to get AI-generated news summaries for people who don't like to read newspapers. It uses the News API and Gemini API to get AI generated news summaries. I developed this website as my project for Buildspace Nights & Weekends Season 6. Watch my demo <Link href='https://sage.buildspace.so/projects/recents-a-website-to-get-an-generated-news-summaries-NeHKLm0' className='underline decoration-2 hover:text-neutral-300'>here</Link>
+                                Recents is a platform to get AI-generated news summaries for people who don&apos;t like to read newspapers. It uses the News API and Gemini API to get AI generated news summaries. I developed this website as my project for Buildspace Nights & Weekends Season 6. Watch my demo <Link href='https://sage.buildspace.so/projects/recents-a-website-to-get-an-generated-news-summaries-NeHKLm0' className='underline decoration-2 hover:text-neutral-300'>here</Link>
                             </p>
                         </CardContent>
                         <Separator />
