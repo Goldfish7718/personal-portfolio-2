@@ -28,6 +28,7 @@ import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { scrollToElement } from "./Navbar";
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
   const router = useRouter();
@@ -320,7 +321,7 @@ const Hero = () => {
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
               onClick={() => router.push("https://twitter.com/tejas_jsx")}>
-              <Twitter className="mx-2" />X (Twitter)
+              <FaXTwitter size={24} className="mx-2" />X
             </Button>
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
