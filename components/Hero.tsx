@@ -23,12 +23,25 @@ import { useRouter } from "next/navigation";
 import { Separator } from "./ui/separator";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import {
+  SiClerk,
+  SiDjango,
+  SiExpress,
+  SiFastapi,
+  SiFlask,
+  SiGooglegemini,
+  SiHono,
+  SiMongodb,
+  SiShadcnui,
+  SiStripe,
+  SiZod,
+} from "react-icons/si";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { scrollToElement } from "./Navbar";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
+import { SiPostgresql } from "react-icons/si";
 
 const Hero = () => {
   const router = useRouter();
@@ -115,7 +128,7 @@ const Hero = () => {
                 </CardTitle>
               </CardHeader>
               <Separator />
-              <CardContent className="p-4 flex flex-col items-center sm:items-start">
+              <CardContent className="p-4 grid grid-cols-3 grid-rows-5 gap-2 items-center sm:items-start">
                 <div className="flex flex-row my-2">
                   <FaReact size={24} className="mx-2" /> React
                 </div>
@@ -130,6 +143,36 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-row my-2">
                   <FaNodeJs size={24} className="mx-2" /> Node.js
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiPostgresql size={24} className="mx-2" /> Postgres
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiShadcnui size={24} className="mx-2" /> shadcn/ui
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiZod size={24} className="mx-2" /> Zod
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiClerk size={24} className="mx-2" /> Clerk
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiFastapi size={24} className="mx-2" /> FastAPI
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiStripe size={24} className="mx-2" /> Stripe
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiFlask size={24} className="mx-2" /> Flask
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiDjango size={24} className="mx-2" /> Django
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiGooglegemini size={24} className="mx-2" /> Gemini
+                </div>
+                <div className="flex flex-row my-2">
+                  <SiHono size={24} className="mx-2" /> Hono
                 </div>
               </CardContent>
               <Separator />
