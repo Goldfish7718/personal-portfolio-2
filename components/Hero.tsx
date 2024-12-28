@@ -64,8 +64,8 @@ const Hero = () => {
           <p
             className="text-left py-4 text-sm sm:text-lg animate-fade-in"
             style={{ animationFillMode: "backwards", animationDelay: "1.4s" }}>
-            Passionate Full Stack Web Developer based in India. Open-source
-            contributor & Blockchain Developer!
+            Passionate Full Stack Web Developer based in India. Machine Learning
+            | Blockchain | Open-source
           </p>
 
           <div
@@ -101,12 +101,13 @@ const Hero = () => {
               <Separator />
               <CardContent className="p-4 text-center sm:text-left flex-grow">
                 <p>
-                  I am a dynamic full-stack web developer with a fervent passion
-                  for machine learning. Armed with a keen eye for detail and a
-                  creative approach to problem-solving, I craft seamless digital
-                  experiences that captivate users. My enthusiasm for exploring
-                  the intricacies of machine learning fuels my drive to innovate
-                  and push boundaries in both web development and AI technology.
+                  I am a full-stack web developer with a fervent passion for
+                  machine learning and blockchain tech. Armed with a keen eye
+                  for detail and a creative approach to problem-solving, I craft
+                  seamless digital experiences that captivate users. My
+                  enthusiasm for exploring the intricacies of machine learning
+                  fuels my drive to innovate and push boundaries in both web
+                  development and AI technology.
                 </p>
               </CardContent>
               <Separator />
