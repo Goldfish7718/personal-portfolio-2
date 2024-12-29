@@ -42,6 +42,7 @@ import { scrollToElement } from "./Navbar";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiPostgresql } from "react-icons/si";
+import WordRotate from "./ui/word-rotate";
 
 const Hero = () => {
   const router = useRouter();
@@ -52,14 +53,20 @@ const Hero = () => {
       <div className="h-screen flex flex-col items-center flex-grow" id="home">
         {/* LANDING PAGE */}
         <div className="mx-4 my-8 sm:my-0 text-left">
-          <h1 className="mt-52 text-3xl lg:text-5xl dark:text-neutral-400 text-gray-800 animate-fade-in">
+          <h1 className="mt-52 text-3xl lg:text-5xl text-purple-500 animate-fade-in">
             Crafting Digital Experiences
           </h1>
-          <h1
-            className="text-3xl lg:text-5xl mt-0.5 sm:mt-1 animate-fade-in"
-            style={{ animationFillMode: "backwards", animationDelay: ".7s" }}>
-            for Brands & Startups
-          </h1>
+          <div className="flex flex-row items-center">
+            <h1
+              className="text-3xl lg:text-5xl mt-0.5 sm:mt-1 animate-fade-in text-purple-700"
+              style={{ animationFillMode: "backwards", animationDelay: ".7s" }}>
+              for &nbsp;
+            </h1>
+            <WordRotate
+              words={["Brands", "Startups", "Companies"]}
+              className="text-3xl lg:text-5xl mt-0.5 sm:mt-1 animate-fade-in text-purple-800"
+            />
+          </div>
 
           <p
             className="text-left py-4 text-sm sm:text-lg animate-fade-in"

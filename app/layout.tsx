@@ -7,11 +7,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tejas Nanoti | Web Dev | Blockchain | Machine Learning",
-  description: "Tejas Nanoti is a Full Stack Web developer based in India. Currently working on open-source projects and freelancing.",
-  metadataBase: new URL('https://tejasnanoti.vercel.app'),
+  description:
+    "Tejas Nanoti is a Full Stack Web developer based in India. Currently working on open-source projects and freelancing.",
+  metadataBase: new URL("https://tejasnanoti.vercel.app"),
   openGraph: {
     title: "Tejas Nanoti • Web dev • Blockchain • ML Enthusiast",
-    description: "20 year old MERN Stack & Ethereum Blockchain Developer. Based in India.",
+    description:
+      "20 year old MERN Stack & Ethereum Blockchain Developer. Based in India.",
     url: "https://tejasnanoti.vercel.app",
     images: {
       url: "/opengraph-image.png",
@@ -19,8 +21,8 @@ export const metadata: Metadata = {
       height: 960,
       alt: "Tejas Nanoti | Web Dev | Blockchain | Machine Learning",
     },
-    siteName: "Tejas Nanoti's Personal Portfolio Website"
-  }
+    siteName: "Tejas Nanoti's Personal Portfolio Website",
+  },
 };
 
 export default function RootLayout({
@@ -34,14 +36,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem
-        disableTransitionOnChange
-      >
+        {/* <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          disableTransitionOnChange> */}
         {children}
-      </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
