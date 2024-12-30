@@ -41,6 +41,8 @@ import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiPostgresql } from "react-icons/si";
 import WordRotate from "./ui/word-rotate";
+import AnimatedShinyText from "./ui/animated-shiny-text";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -70,6 +72,17 @@ const Hero = () => {
             Passionate Full Stack Web Developer based in India. Machine Learning
             | Blockchain | Open-source
           </p>
+
+          <div className="z-10 flex items-center justify-start">
+            <div
+              className={cn(
+                "group rounded-full border border-purple-500 bg-purple-200 text-base  transition-all ease-in hover:cursor-pointer hover:bg-purple-400"
+              )}>
+              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out text-purple-600 hover:duration-300">
+                <span>✨ 600+ Contributions in 2024</span>
+              </AnimatedShinyText>
+            </div>
+          </div>
 
           <div
             className="mt-6 flex flex-row mb-20 animate-fade-vertical-in"
@@ -112,14 +125,6 @@ const Hero = () => {
                   development and AI technology.
                 </p>
               </CardContent>
-              <Separator />
-              <CardFooter className="flex justify-center sm:justify-start">
-                <Button className="mt-4" variant="outline" asChild>
-                  <Link href="https://github.com/goldfish7718">
-                    View Github Profile <Github size={18} className="mx-1" />
-                  </Link>
-                </Button>
-              </CardFooter>
             </Card>
             <Card className="m-1 my-4 sm:m-4 md:m-6 md:my-12 sm:w-1/2">
               <CardHeader>
@@ -175,15 +180,6 @@ const Hero = () => {
                   <SiHono size={24} className="mx-2" /> Hono
                 </div>
               </CardContent>
-              <Separator />
-              <CardFooter className="flex justify-center sm:justify-start">
-                <Button className="mt-4" variant="outline" asChild>
-                  <Link href="https://github.com/goldfish7718/Shelf-mates">
-                    View MERN Stack Project{" "}
-                    <ArrowUpRightFromSquare size={18} className="mx-1" />
-                  </Link>
-                </Button>
-              </CardFooter>
             </Card>
           </div>
         </div>
@@ -197,7 +193,9 @@ const Hero = () => {
             <Card className="m-2 md:w-1/3 flex flex-col">
               <CardHeader className="flex flex-row justify-between items-center sm:flex-col lg:flex-row">
                 <CardTitle>Shelf-mates</CardTitle>
-                <Badge variant="secondary" className="sm:text-xs">
+                <Badge
+                  variant="secondary"
+                  className="sm:text-xs bg-purple-200 border-purple-500">
                   MERN Stack + Chakra UI
                 </Badge>
               </CardHeader>
@@ -246,7 +244,7 @@ const Hero = () => {
                 <div className="flex sm:flex-row flex-col">
                   <Badge
                     variant="secondary"
-                    className="mx-1 my-1 sm:my-0 sm:text-xs">
+                    className="mx-1 my-1 sm:my-0 sm:text-xs bg-purple-200 border-purple-500">
                     MERN Stack + shadcn/ui
                   </Badge>
                 </div>
@@ -291,7 +289,9 @@ const Hero = () => {
             <Card className="m-2 md:w-1/3 flex flex-col">
               <CardHeader className="flex flex-row justify-between items-center sm:flex-col lg:flex-row">
                 <CardTitle>Brach-prompt</CardTitle>
-                <Badge className="sm:text-xs" variant="secondary">
+                <Badge
+                  className="sm:text-xs bg-purple-200 border-purple-500"
+                  variant="secondary">
                   Next.js + shadcn/ui
                 </Badge>
               </CardHeader>
