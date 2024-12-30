@@ -16,10 +16,8 @@ import {
   Linkedin,
   Mail,
   Settings,
-  Twitter,
   User,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { Separator } from "./ui/separator";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -45,8 +43,6 @@ import { SiPostgresql } from "react-icons/si";
 import WordRotate from "./ui/word-rotate";
 
 const Hero = () => {
-  const router = useRouter();
-
   return (
     <>
       {/* HERO */}
@@ -83,11 +79,10 @@ const Hero = () => {
               onClick={() => scrollToElement("projects")}>
               View Projects
             </Button>
-            <Button
-              className="mr-3 w-50"
-              variant="secondary"
-              onClick={() => router.push("https://github.com/goldfish7718")}>
-              Github <Github size={18} className="mx-1" />
+            <Button className="mr-3 w-50" variant="secondary" asChild>
+              <Link href="https://github.com/goldfish7718">
+                Github <Github size={18} className="mx-1" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -119,13 +114,10 @@ const Hero = () => {
               </CardContent>
               <Separator />
               <CardFooter className="flex justify-center sm:justify-start">
-                <Button
-                  className="mt-4"
-                  variant="outline"
-                  onClick={() =>
-                    router.push("https://github.com/goldfish7718")
-                  }>
-                  View Github Profile <Github size={18} className="mx-1" />
+                <Button className="mt-4" variant="outline" asChild>
+                  <Link href="https://github.com/goldfish7718">
+                    View Github Profile <Github size={18} className="mx-1" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -185,14 +177,11 @@ const Hero = () => {
               </CardContent>
               <Separator />
               <CardFooter className="flex justify-center sm:justify-start">
-                <Button
-                  className="mt-4"
-                  variant="outline"
-                  onClick={() =>
-                    router.push("https://github.com/goldfish7718/Shelf-mates")
-                  }>
-                  View MERN Stack Project{" "}
-                  <ArrowUpRightFromSquare size={18} className="mx-1" />
+                <Button className="mt-4" variant="outline" asChild>
+                  <Link href="https://github.com/goldfish7718/Shelf-mates">
+                    View MERN Stack Project{" "}
+                    <ArrowUpRightFromSquare size={18} className="mx-1" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -237,18 +226,15 @@ const Hero = () => {
               </CardContent>
               <Separator />
               <CardFooter className="flex flex-row p-3">
-                <Button
-                  className="flex-grow m-2"
-                  onClick={() =>
-                    router.push("https://github.com/Goldfish7718/shelf-mates")
-                  }>
-                  <Github size={24} />
+                <Button className="flex-grow m-2" asChild>
+                  <Link href="https://github.com/Goldfish7718/shelf-mates">
+                    <Github size={24} />
+                  </Link>
                 </Button>
-                <Button
-                  className="flex-grow m-2"
-                  variant="secondary"
-                  onClick={() => router.push("https://shelfmates.vercel.app")}>
-                  <ArrowUpRightFromSquare size={24} />
+                <Button className="flex-grow m-2" variant="secondary" asChild>
+                  <Link href="https://shelfmates.vercel.app">
+                    <ArrowUpRightFromSquare size={24} />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -288,18 +274,15 @@ const Hero = () => {
               </CardContent>
               <Separator />
               <CardFooter className="flex flex-row p-3">
-                <Button
-                  className="flex-grow m-2"
-                  onClick={() =>
-                    router.push("https://github.com/Goldfish7718/Dev.hike")
-                  }>
-                  <Github size={24} />
+                <Button className="flex-grow m-2" asChild>
+                  <Link href="https://github.com/Goldfish7718/Dev.hike">
+                    <Github size={24} />
+                  </Link>
                 </Button>
-                <Button
-                  className="flex-grow m-2"
-                  variant="secondary"
-                  onClick={() => router.push("https://devhike.vercel.app")}>
-                  <ArrowUpRightFromSquare size={24} />
+                <Button className="flex-grow m-2" variant="secondary" asChild>
+                  <Link href="https://devhike.vercel.app">
+                    <ArrowUpRightFromSquare size={24} />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -336,20 +319,15 @@ const Hero = () => {
               </CardContent>
               <Separator />
               <CardFooter className="flex flex-row p-3">
-                <Button
-                  className="flex-grow m-2"
-                  onClick={() =>
-                    router.push("https://github.com/Goldfish7718/branch-prompt")
-                  }>
-                  <Github size={24} />
+                <Button className="flex-grow m-2" asChild>
+                  <Link href="https://github.com/Goldfish7718/branch-prompt">
+                    <Github size={24} />
+                  </Link>
                 </Button>
-                <Button
-                  className="flex-grow m-2"
-                  variant="secondary"
-                  onClick={() =>
-                    router.push("https://branch-prompt.vercel.app")
-                  }>
-                  <ArrowUpRightFromSquare size={24} />
+                <Button className="flex-grow m-2" variant="secondary" asChild>
+                  <Link href="https://branch-prompt.vercel.app">
+                    <ArrowUpRightFromSquare size={24} />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -371,62 +349,58 @@ const Hero = () => {
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
-              onClick={() => router.push("https://twitter.com/tejas_jsx")}>
-              <FaXTwitter size={24} className="mx-2" />X
+              asChild>
+              <Link href="https://twitter.com/tejas_jsx">
+                <FaXTwitter size={24} className="mx-2" />X
+              </Link>
             </Button>
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
-              onClick={() =>
-                router.push("https://instagram.com/tejasssssssss__")
-              }>
-              <Instagram className="mx-2" /> Instagram
+              asChild>
+              <Link href="https://instagram.com/tejasssssssss__">
+                <Instagram className="mx-2" /> Instagram
+              </Link>
             </Button>
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
-              onClick={() => router.push("https://github.com/goldfish7718")}>
-              <Github className="mx-2" /> Github
+              asChild>
+              <Link href="https://github.com/goldfish7718">
+                <Github className="mx-2" /> Github
+              </Link>
             </Button>
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
-              onClick={() => router.push("https://bento.me/tejasnanoti")}>
-              <User className="mx-2" /> Bento
+              asChild>
+              <Link href="https://bento.me/tejasnanoti">
+                <User className="mx-2" /> Bento
+              </Link>
             </Button>
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
-              onClick={() =>
-                router.push(
-                  "https://www.linkedin.com/in/tejas-nanoti-23965823b/"
-                )
-              }>
-              <Linkedin className="mx-2" /> LinkedIn
+              asChild>
+              <Link href="https://www.linkedin.com/in/tejas-nanoti-23965823b/">
+                <Linkedin className="mx-2" /> LinkedIn
+              </Link>
             </Button>
             <Button
               className="p-8 m-2 sm:m-4 sm:p-16"
               variant="secondary"
-              onClick={() => router.push("mailto:tejasnanoti2@gmail.com")}>
-              <Mail className="mx-2" /> Email
+              asChild>
+              <Link href="mailto:tejasnanoti2@gmail.com">
+                <Mail className="mx-2" /> Email
+              </Link>
             </Button>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center mt-5 mb-10">
-          <Button
-            className="flex flex-row"
-            onClick={() =>
-              router.push(
-                "https://github.com/goldfish7718/personal-portfolio-2"
-              )
-            }>
-            Codebase on Github{" "}
-            <ArrowUpRightFromSquare size={18} className="mx-1" />
-          </Button>
-          <Button className="m-4" variant="link" asChild>
-            <Link href="https://tejasnanoti-old-portfolio.vercel.app">
-              View Old Portfolio{" "}
+        <div className="flex flex-col justify-center items-center mt-5 mb-10">
+          <Button className="flex flex-row" asChild>
+            <Link href="https://github.com/goldfish7718/personal-portfolio-2">
+              Codebase on Github{" "}
               <ArrowUpRightFromSquare size={18} className="mx-1" />
             </Link>
           </Button>
