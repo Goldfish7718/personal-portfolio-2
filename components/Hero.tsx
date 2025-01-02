@@ -1,13 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "./ui/button";
 import {
   ArrowUpRightFromSquare,
@@ -34,8 +28,6 @@ import {
   SiStripe,
   SiZod,
 } from "react-icons/si";
-import Image from "next/image";
-import { Badge } from "./ui/badge";
 import { scrollToElement } from "./Navbar";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
@@ -43,6 +35,8 @@ import { SiPostgresql } from "react-icons/si";
 import WordRotate from "./ui/word-rotate";
 import AnimatedShinyText from "./ui/animated-shiny-text";
 import { cn } from "@/lib/utils";
+import projects from "@/data/projects.json";
+import ProjectCard from "./ProjectCard";
 
 const Hero = () => {
   return (
@@ -76,7 +70,7 @@ const Hero = () => {
           <div className="z-10 flex items-center justify-start">
             <div
               className={cn(
-                "group rounded-full border border-purple-500 bg-purple-200 text-base  transition-all ease-in hover:cursor-pointer hover:bg-purple-400"
+                "group rounded-full border border-purple-500 bg-purple-200 text-base transition-all ease-in hover:cursor-pointer hover:bg-purple-400"
               )}>
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out text-purple-600 hover:duration-300">
                 <span>✨ 600+ Contributions in 2024</span>
@@ -189,148 +183,9 @@ const Hero = () => {
           <h1 className="mt-20 text-3xl lg:text-5xl">Noteable Projects</h1>
 
           <div className="flex flex-col md:flex-row m-2 mt-10 text-left">
-            {/* PROJECT SHELF-MATES */}
-            <Card className="m-2 md:w-1/3 flex flex-col">
-              <CardHeader className="flex flex-row justify-between items-center sm:flex-col lg:flex-row">
-                <CardTitle>Shelf-mates</CardTitle>
-                <Badge
-                  variant="secondary"
-                  className="sm:text-xs bg-purple-200 border-purple-500">
-                  MERN Stack + Chakra UI
-                </Badge>
-              </CardHeader>
-              <Separator />
-              <CardContent className="p-2 flex-grow">
-                <Image
-                  alt="shelf-mates image"
-                  className="mx-auto"
-                  src="/shelf-mates.png"
-                  width={400}
-                  height={300}
-                  objectFit="cover"
-                />
-                <Separator />
-
-                <p>
-                  Shelf Mates is an E-commerce Grocery Delivery platform with
-                  customer and admin sides. Customers enjoy full CRUD operations
-                  for profiles, carts, orders, reviews, and addresses. The admin
-                  side boasts an Admin Dashboard with insightful data
-                  visualizations using the Recharts library, offering
-                  product-specific statistics like sales, ratings, and customer
-                  feedback. The backend, powered by MongoDB and Express, hosts a
-                  secure authentication system using JWT stored in cookies.
-                </p>
-              </CardContent>
-              <Separator />
-              <CardFooter className="flex flex-row p-3">
-                <Button className="flex-grow m-2" asChild>
-                  <Link href="https://github.com/Goldfish7718/shelf-mates">
-                    <Github size={24} />
-                  </Link>
-                </Button>
-                <Button className="flex-grow m-2" variant="secondary" asChild>
-                  <Link href="https://shelfmates.vercel.app">
-                    <ArrowUpRightFromSquare size={24} />
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* PROJECT Dev.hike */}
-            <Card className="m-2 md:w-1/3 flex flex-col">
-              <CardHeader className="flex flex-row justify-between items-center sm:flex-col lg:flex-row">
-                <CardTitle>Dev.hike</CardTitle>
-                <div className="flex sm:flex-row flex-col">
-                  <Badge
-                    variant="secondary"
-                    className="mx-1 my-1 sm:my-0 sm:text-xs bg-purple-200 border-purple-500">
-                    MERN Stack + shadcn/ui
-                  </Badge>
-                </div>
-              </CardHeader>
-              <Separator />
-              <CardContent className="p-2 flex-grow">
-                <Image
-                  alt="dev.hike image"
-                  className="mx-auto"
-                  src="/devhike.png"
-                  width={400}
-                  height={300}
-                  objectFit="cover"
-                />
-                <Separator />
-
-                <p>
-                  Dev.hike is a social media platform intended for software
-                  developers and enthusiasts. Dev.hike will provide certain
-                  features like posts, discussion forums and most importantly,
-                  documenting their development journey. Dev.hike will be built
-                  on the MERN stack with Shadcn-ui as the design system & Clerk
-                  for powering authentication.{" "}
-                </p>
-              </CardContent>
-              <Separator />
-              <CardFooter className="flex flex-row p-3">
-                <Button className="flex-grow m-2" asChild>
-                  <Link href="https://github.com/Goldfish7718/Dev.hike">
-                    <Github size={24} />
-                  </Link>
-                </Button>
-                <Button className="flex-grow m-2" variant="secondary" asChild>
-                  <Link href="https://devhike.vercel.app">
-                    <ArrowUpRightFromSquare size={24} />
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* PROJECT BRANCH PROMPT */}
-            <Card className="m-2 md:w-1/3 flex flex-col">
-              <CardHeader className="flex flex-row justify-between items-center sm:flex-col lg:flex-row">
-                <CardTitle>Brach-prompt</CardTitle>
-                <Badge
-                  className="sm:text-xs bg-purple-200 border-purple-500"
-                  variant="secondary">
-                  Next.js + shadcn/ui
-                </Badge>
-              </CardHeader>
-              <Separator />
-              <CardContent className="p-2 flex-grow">
-                <Image
-                  alt="branch-prompt image"
-                  className="mx-auto"
-                  src="/branch-prompt.png"
-                  width={400}
-                  height={300}
-                  objectFit="cover"
-                />
-                <Separator />
-
-                <p>
-                  Branch-prompt is an online social platform which let&apos;s
-                  students from my college post anonymous prompts anonymously!
-                  This is a single-page applicationI built with Next.js,
-                  Shadcn-UI & Tailwind CSS. It uses MongoDB for its primary
-                  database. The platform is completely anonymous since it does
-                  not collect name or hints about the user so Branch-prompt is
-                  100% anonymous.
-                </p>
-              </CardContent>
-              <Separator />
-              <CardFooter className="flex flex-row p-3">
-                <Button className="flex-grow m-2" asChild>
-                  <Link href="https://github.com/Goldfish7718/branch-prompt">
-                    <Github size={24} />
-                  </Link>
-                </Button>
-                <Button className="flex-grow m-2" variant="secondary" asChild>
-                  <Link href="https://branch-prompt.vercel.app">
-                    <ArrowUpRightFromSquare size={24} />
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
+            {projects.map((project, index) => (
+              <ProjectCard {...project} />
+            ))}
           </div>
         </div>
 
