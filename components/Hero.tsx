@@ -37,6 +37,7 @@ import AnimatedShinyText from "./ui/animated-shiny-text";
 import { cn } from "@/lib/utils";
 import projects from "@/data/projects.json";
 import ProjectCard from "./ProjectCard";
+import NumberTicker from "./ui/number-ticker";
 
 const Hero = () => {
   return (
@@ -73,7 +74,10 @@ const Hero = () => {
                 "group rounded-full border border-purple-500 bg-purple-200 text-base transition-all ease-in hover:cursor-pointer hover:bg-purple-400"
               )}>
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out text-purple-600 hover:duration-300">
-                <span>✨ 600+ Contributions in 2024</span>
+                <span>
+                  ✨ <NumberTicker value={600} className="text-purple-600" />+
+                  Contributions in 2024
+                </span>
               </AnimatedShinyText>
             </div>
           </div>
@@ -184,7 +188,7 @@ const Hero = () => {
 
           <div className="flex flex-col md:flex-row m-2 mt-10 text-left">
             {projects.map((project, index) => (
-              <ProjectCard {...project} />
+              <ProjectCard {...project} key={index} />
             ))}
           </div>
         </div>

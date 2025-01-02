@@ -48,7 +48,7 @@ const ProjectCard = ({
           src={image}
           width={400}
           height={300}
-          objectFit="cover"
+          // objectFit="cover"
         />
         <Separator />
 
