@@ -26,10 +26,13 @@ import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
 import { Separator } from "./ui/separator";
 
-export const scrollToElement = (id: string) => {
+export const scrollToElement = (
+  id: string,
+  block: ScrollLogicalPosition = "center"
+) => {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
+    element.scrollIntoView({ behavior: "smooth", block: block });
   }
 };
 
@@ -67,7 +70,7 @@ const Navbar = () => {
                   <Button
                     variant="outline"
                     className="m-2 w-full"
-                    onClick={() => scrollToElement("projects")}>
+                    onClick={() => scrollToElement("projects", "start")}>
                     Projects
                   </Button>
                   <Button
@@ -107,7 +110,7 @@ const Navbar = () => {
             <MenubarMenu>
               <MenubarTrigger
                 className="hover:cursor-pointer"
-                onClick={() => scrollToElement("projects")}>
+                onClick={() => scrollToElement("projects", "start")}>
                 Projects
               </MenubarTrigger>
             </MenubarMenu>

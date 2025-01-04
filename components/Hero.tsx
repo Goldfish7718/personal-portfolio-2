@@ -38,6 +38,7 @@ import { cn } from "@/lib/utils";
 import projects from "@/data/projects.json";
 import ProjectCard from "./ProjectCard";
 import NumberTicker from "./ui/number-ticker";
+import About from "./About";
 
 const Hero = () => {
   return (
@@ -87,7 +88,7 @@ const Hero = () => {
             style={{ animationFillMode: "backwards", animationDelay: "2.1s" }}>
             <Button
               className="mr-3 w-50"
-              onClick={() => scrollToElement("projects")}>
+              onClick={() => scrollToElement("projects", "start")}>
               View Projects
             </Button>
             <Button className="mr-3 w-50" variant="secondary" asChild>
@@ -99,31 +100,7 @@ const Hero = () => {
         </div>
 
         {/* ABOUT ME */}
-        <div className="mx-4 text-center" id="about-me">
-          <h1 className="mt-20 text-3xl lg:text-5xl">
-            Heyy There! I&apos;m Tejas!
-          </h1>
-
-          <div className="flex flex-col sm:flex-row md:mt-0 mt-6 ">
-            <Card className="m-1 my-4 sm:m-4 md:m-6 md:my-12 sm:w-1/2 flex flex-col">
-              <CardHeader>
-                <CardTitle className="flex flex-row justify-center sm:justify-between">
-                  About me <User size={24} className="mx-1" />
-                </CardTitle>
-              </CardHeader>
-              <Separator />
-              <CardContent className="p-4 text-center sm:text-left flex-grow">
-                <p>
-                  I am a full-stack web developer with a fervent passion for
-                  machine learning and blockchain tech. Armed with a keen eye
-                  for detail and a creative approach to problem-solving, I craft
-                  seamless digital experiences that captivate users. My
-                  enthusiasm for exploring the intricacies of machine learning
-                  fuels my drive to innovate and push boundaries in both web
-                  development and AI technology.
-                </p>
-              </CardContent>
-            </Card>
+        {/*
             <Card className="m-1 my-4 sm:m-4 md:m-6 md:my-12 sm:w-1/2">
               <CardHeader>
                 <CardTitle className="flex flex-row justify-center sm:justify-between">
@@ -180,7 +157,8 @@ const Hero = () => {
               </CardContent>
             </Card>
           </div>
-        </div>
+        </div> */}
+        <About />
 
         {/* PROJECTS */}
         <div id="projects" className="text-center">

@@ -141,7 +141,21 @@ h4 {
   @apply scroll-m-20 text-xl font-semibold tracking-tight;
 }
 
-p {
+p { 
   @apply leading-7;
 }
 
+.highlight {
+  @apply text-purple-600 font-bold;
+}
+
+@font-face {
+  font-family: 'PlaywriteAustraliaSA';
+  src: url('/fonts/PlaywriteAUSA-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-playwrite {
+  font-family: 'PlaywriteAustraliaSA', sans-serif;
+}
