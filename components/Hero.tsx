@@ -162,7 +162,7 @@ const Hero = () => {
 
         {/* PROJECTS */}
         <div id="projects" className="text-center">
-          <h1 className="mt-20 text-3xl lg:text-5xl">Noteable Projects</h1>
+          <h1 className="mt-20 text-3xl lg:text-5xl">Notable Projects</h1>
 
           <div className="flex flex-col md:flex-row m-2 mt-10 text-left">
             {projects.map((project, index) => (
